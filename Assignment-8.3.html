@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><!-- Head of the Root -->
+   <head><!-- child sub root of the html tag as head tag  -->
+      <!-- it is a title tag -->
+	  <title>jQuery</title>
+	  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+      <style type="text/css">
+		/*Applying basic style to h1 and body contents*/
+		
+		    body
+		    {
+	        font-size: 18px;
+	        font-family: sans-serif;
+		    }
+      </style>
+
+   </head>
+   <body>
+      <h1>jQuery Tooltip</h1>
+      <br>
+      <p>Hover of the fields to display tooltip using jQuery</p><br>
+      <br>
+      First Name: <input type="text" id="FirstName" title="Please write your first name" />
+      <br>
+      <br>
+      Last Name: <input type="text" id="LastName" title="Please write your last name" />
+      <br>
+      <br>
+      <input type="Submit" onclick="onSubmit();" />
+
+      <script>
+
+      //jQuery tooltip function to display tooltip. It will take the value of title attribute of the element.
+         
+         $(function() 
+            {
+            $("#FirstName").tooltip();
+            $("#LastName").tooltip();
+            });
+
+      //Alert first and last name of the user
+         
+         function onSubmit()
+            {
+         	var fName=document.getElementById("FirstName").value;
+         	var lName=document.getElementById("LastName").value;
+         	var output="First name: "+fName+" Last Name: "+lName;
+			   alert(output);
+            }
+      </script>
+
+   </body>
+</html>
